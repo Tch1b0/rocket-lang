@@ -24,6 +24,8 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 			return val
 		}
 		return object.NewReturnValue(val)
+	case *ast.Class:
+		return evalClass(node, env)
 
 	// Expressions
 	case *ast.Integer:

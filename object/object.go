@@ -36,6 +36,7 @@ const (
 	HASH_OBJ         = "HASH"
 	FILE_OBJ         = "FILE"
 	MODULE_OBJ       = "MODULE"
+	CLASS_OBJ        = "CLASS"
 )
 
 type ObjectMethod struct {

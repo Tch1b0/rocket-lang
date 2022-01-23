@@ -64,6 +64,8 @@ const (
 
 	EXPORT = "EXPORT"
 	IMPORT = "IMPORT"
+
+	CLASS = "CLASS"
 )
 
 var keywords = map[string]TokenType{
@@ -78,6 +80,7 @@ var keywords = map[string]TokenType{
 	"in":      IN,
 	"export":  EXPORT,
 	"import":  IMPORT,
+	"class":   CLASS,
 }
 
 func LookupIdent(ident string) TokenType {

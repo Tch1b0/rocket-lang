@@ -32,6 +32,8 @@ func TestNextToken(t *testing.T) {
 	{"foo": "bar"}
 
 	5 <= 10 >= 5;
+
+	class
 	`
 
 	tests := []struct {
@@ -126,6 +128,7 @@ func TestNextToken(t *testing.T) {
 		{token.GT_EQ, ">="},
 		{token.INT, "5"},
 		{token.SEMICOLON, ";"},
+		{token.CLASS, "class"},
 		{token.EOF, ""},
 	}
 

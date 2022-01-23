@@ -135,7 +135,7 @@ func (l *Lexer) NextToken() token.Token {
 		tok.Type = token.STRING
 		tok.Literal = l.readString()
 	default:
-		if isLetter(l.ch) {
+		if isLetter(l.ch) || l.ch == '@' {
 			tok.Literal = l.readIdentifier()
 			tok.Type = token.LookupIdent(tok.Literal)
 			return tok

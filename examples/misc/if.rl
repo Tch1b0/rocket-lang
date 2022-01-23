@@ -13,3 +13,6 @@ end
 if (true)
   puts("true3")
 end
+
+@test = "test"
+puts(@test)
