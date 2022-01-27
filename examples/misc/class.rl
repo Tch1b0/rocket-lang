@@ -1,21 +1,22 @@
 class Car 
-  def initialize(type)
-    private @distance
+  def initialize(type) {
     @type = type
-    @distance = 0
+    @_distance = 0
     
-    puts("initialized car)
-  end
+    //puts("initialized car)
+  }
 
-  private def is_broken()
+  def _is_broken() {
     return (@distance > 5)
-  end
+  }
 
-  def drive()
-    @distance = @distance + 1
-  end
+  //def drive()
+  //  @distance = @distance + 1
+  //end
 
-  def self.types()
-    return ["Volvo", "BMW", "Porsche"]
-  end
+  //def self.types()
+  //  return ["Volvo", "BMW", "Porsche"]
+  //end
 end
+
+test = Car.new()

@@ -2,6 +2,8 @@ package object
 
 import (
 	"bytes"
+	"fmt"
+
 	"github.com/flipez/rocket-lang/ast"
 )
 
@@ -20,5 +22,6 @@ func (c *Class) Inspect() string {
 	return out.String()
 }
 func (c *Class) InvokeMethod(method string, env Environment, args ...Object) Object {
+	fmt.Printf("%#v", c.Env)
 	return objectMethodLookup(c, method, args)
 }
